@@ -1,9 +1,9 @@
 package com.phonebook.repository;
 
-import com.phonebook.entity.ContactDetailsEntity;
+import com.phonebook.entity.Contact;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ContactDetailsRepository extends JpaRepository<ContactDetailsEntity,Integer> {
+public interface ContactRepository extends JpaRepository<Contact,Integer> {
 }
