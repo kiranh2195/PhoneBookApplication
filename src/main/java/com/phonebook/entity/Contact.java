@@ -1,14 +1,19 @@
 package com.phonebook.entity;
 
-import jakarta.persistence.*;
+
 import lombok.Data;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 @Entity
-@Table(name="CONTACT_TBL")
+@Table(name="CONTACTS_TBL")
 @Data
 public class Contact {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue
     private Integer contactId;
     private String name;
     private String email;

@@ -31,7 +31,7 @@ public class ContactController {
         return contactService.getALlContacts();
     }
 
-    @GetMapping(value = "/getContact/{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/getContact/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Contact getContactById(@PathVariable Integer id) {
         logger.debug("error occured in getContactById");
         return contactService.getContactById(id);
@@ -43,7 +43,7 @@ public class ContactController {
         return contactService.deleteContactById(id);
     }
 
-    @PatchMapping(value = "/update", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(value = "/update", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public String updateContactInfo(@RequestBody Contact entity) {
         logger.debug("error occured in updateContactInfo");
         return contactService.updateContact(entity);

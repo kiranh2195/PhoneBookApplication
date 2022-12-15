@@ -21,7 +21,6 @@ public class ContactServiceImpl implements ContactService {
     @Autowired
     private ContactRepository repo;
 
-    @Override
     public String saveContact(Contact contact) {
         Contact save = repo.save(contact);
         logger.debug("error occurred in saveContact");
@@ -47,7 +46,6 @@ public class ContactServiceImpl implements ContactService {
         return null;
     }
 
-    @Override
     public String updateContact(Contact contact) {
         if (repo.existsById(contact.getContactId())) {
             repo.save(contact);
